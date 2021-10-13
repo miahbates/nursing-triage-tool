@@ -42,7 +42,7 @@ button {
   box-shadow: 5px 5px 5px 0 #247B7B;
   background-color: #78CDD7;
   color: white;
-  transform: scale(1.0); 
+  transform: scale(1.1); 
 }
 
 .fa-laptop-medical {
@@ -60,7 +60,7 @@ button {
   justify-content: center;
 }
 
-.head-info {
+.intro{
   margin: 0 auto;
   width: 90%;
 }
@@ -73,7 +73,7 @@ h1 {
   font-size: 3rem;
 }
 
-.head-info {
+.intro {
   margin: 0 auto;
   width: 60%;
 }
