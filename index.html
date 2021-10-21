@@ -10,17 +10,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&amp;family=Space+Mono&amp;display=swap" rel="stylesheet">
+  <script src="index.js" defer></script> 
 </head>
 <body>
     <header>
-    <h1 class="line-1 anim-typewriter">How can we help?<span class="fas fa-laptop-medical"></span></h1>
+     <h1 class="line-1 anim-typewriter">How can we help?<span class="fas fa-laptop-medical"></span></h1>
     </header>
     <div class="intro">
       <div class="column">
-      <section>Triage your symptoms</section>
-      <button id="triageButton">Click here to speak to an oncology nurse</button>
+        <section>Triage your symptoms</section>
+        <button id="triageButton">Click here to speak to an oncology nurse</button>
+      </div>
     </div>
-  </div>
-<script src="index.js"></script> 
-</body>
+    <section class="symptoms" hidden>
+      <form action="/" method="post">
+        <label for="nausea-vomiting">Nausea/Vomiting</label>
+        <input id="nausea-vomiting" type="radio" />
+
+        <label for="fever">Fever(above 37.5)</label>
+        <input id="fever" type="radio" />
+
+        <label for="sob">Shortness of breath</label>
+        <input id="sob" type="radio" />
+
+        <label for="cp">Chest pain</label>
+        <input id="cp" type="radio" />
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+ </body>
 </html>

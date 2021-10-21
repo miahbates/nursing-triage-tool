@@ -87,6 +87,10 @@ button {
   to{border-right-color: transparent;}
 }
 
+/* .symptoms {
+  display: none;
+} */
+
 /* bigger screens */
 
 @media screen and (min-width: 768px) {
