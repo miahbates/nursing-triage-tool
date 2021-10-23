@@ -86,6 +86,10 @@ button {
   from{border-right-color: #247B7B;}
   to{border-right-color: transparent;}
 }
+/* 
+.grid-for-symptoms > * {
+  grid-area: 1 / 1 / 1 / 1;
+} */
 
 /* .symptoms {
   display: none;

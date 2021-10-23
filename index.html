@@ -22,22 +22,60 @@
         <button id="triageButton">Click here to speak to an oncology nurse</button>
       </div>
     </div>
-    <section class="symptoms" hidden>
+    <main>
+      <section class="symptoms" hidden>
+        <form action="/" method="post">
+          <h2>Fever</h2>
+          <label for="no-fever">No fever</label>
+          <input id="no-fever" type="radio" />
+
+          <label for="fever">Fever (above 37.5 celsius)</label>
+          <input id="fever" type="radio" />
+
+          <button type="submit">Next Question</button>
+          <button type="submit">Previous Question</button>
+        </form>
+      </section>
+
+      <section class="symptoms" hidden>
+        <form action="/" method="post">
+          <h2>Shortness of breath</h2>
+          <label for="no-sob">No shortness of breath</label>
+          <input id="no-sob" type="radio" />
+
+          <label for="sob-green">New onset shortness of breath with
+            moderate exertion. Eg. Walking to the shops.</label>
+          <input id="sob-green" type="radio" />
+
+          <label for="sob-amber">New onset shortness of breath with
+            minimal exertion Eg. Moving from bed to chair.</label>
+          <input id="sob-amber" type="radio" />
+
+          <label for="sob-red">Shortness of breath at rest Eg. Difficulty talking in full sentances.</label>
+          <input id="sob-amber" type="radio" />
+
+          <button type="submit">Next Question</button>
+          <button type="submit">Previous Question</button>
+       </form>
+     </section>
+
+     <section class="symptoms" hidden>
       <form action="/" method="post">
-        <label for="nausea-vomiting">Nausea/Vomiting</label>
-        <input id="nausea-vomiting" type="radio" />
+        <h2>Chest pain</h2>
+        <label for="no-cp">No chest pain</label>
+        <input id="no-sob" type="radio" />
 
-        <label for="fever">Fever(above 37.5)</label>
-        <input id="fever" type="radio" />
+        <label for="cp-red">Chest pain</label>
+        <input id="cp-red" type="radio" />
 
-        <label for="sob">Shortness of breath</label>
-        <input id="sob" type="radio" />
+        <label for="sob-amber">New onset shortness of breath with
+          minimal exertion Eg. Moving from bed to chair.</label>
+        <input id="sob-amber" type="radio" />
 
-        <label for="cp">Chest pain</label>
-        <input id="cp" type="radio" />
-
-        <button type="submit">Submit</button>
+        <button type="submit">Next Question</button>
+        <button type="submit">Previous Question</button>
       </form>
     </section>
+  </main>
  </body>
 </html>
