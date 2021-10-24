@@ -95,7 +95,7 @@ form > button {
 }
 
 form > button:hover {
-  transform: scale(1.0);
+  transform: scale(0.9);
   background-color: #068D9D;
   box-shadow: rgb(108 112 116 / 44%) 0px 8px 24px;
 
