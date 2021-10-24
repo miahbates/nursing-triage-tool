@@ -23,7 +23,7 @@
       </div>
     </div>
     <main>
-      <section class="symptoms" hidden>
+      <section class="symptoms" data-index="1" hidden>
         <form action="/" method="post">
           <h2>Fever</h2>
           <label for="no-fever">No fever</label>
@@ -32,12 +32,11 @@
           <label for="fever">Fever (above 37.5 celsius)</label>
           <input id="fever" type="radio" />
 
-          <button type="submit">Next Question</button>
-          <button type="submit">Previous Question</button>
+          <button type="submit" data-to="2">Next Question</button>
         </form>
       </section>
 
-      <section class="symptoms" hidden>
+      <section class="symptoms" data-index="2" hidden>
         <form action="/" method="post">
           <h2>Shortness of breath</h2>
           <label for="no-sob">No shortness of breath</label>
@@ -54,12 +53,12 @@
           <label for="sob-red">Shortness of breath at rest Eg. Difficulty talking in full sentances.</label>
           <input id="sob-amber" type="radio" />
 
-          <button type="submit">Next Question</button>
-          <button type="submit">Previous Question</button>
+          <button type="submit" data-to="3">Next Question</button>
+          <button type="submit" data-to="1">Previous Question</button>
        </form>
      </section>
 
-     <section class="symptoms" hidden>
+     <section class="symptoms" data-index="3" hidden>
       <form action="/" method="post">
         <h2>Chest pain</h2>
         <label for="no-cp">No chest pain</label>
