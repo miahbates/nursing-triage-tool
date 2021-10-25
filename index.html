@@ -87,9 +87,36 @@
             <label for="sob-red">Yes, shortness of breath at rest Eg. Difficulty talking in full sentances.</label>
           </span>
          
-          <button type="submit" data-to="3" data-name="sob">Next Question</button>
+          <button type="submit" data-to="4" data-name="sob">Next Question</button>
        </form>
      </section>
+
+     <section class="symptoms" data-index="4" hidden>
+      <form action="/" method="post" class="column">
+        <h2>Vomiting</h2>
+        <p>Are you experiencing vomiting?</p>
+
+        <span>
+          <input id="no-vomit" type="radio" name="vomit" value="0" />
+          <label for="no-vomit">No vomiting.</label>
+        </span>
+        
+        <span>
+          <input id="vomit-green" type="radio" name="vomit" value="1" />
+          <label for="vomit-green">Yes, one episode in 24 hours.</label>
+        </span>
+        
+        <span>
+          <input id="vomit-amber" type="radio" name="vomit" value="2" />
+          <label for="vomit-amber">Yes, 2-4 episodes in 24 hours.</label>
+        </span>
+       
+        <span>
+          <input id="vomit-red" type="radio" name="vomit" value="3" />
+          <label for="vomit-red">Yes, more than 6 episodes in 24 hours.</label>
+        </span>
+       
+        <button type="submit" data-to="4" data-name="sob">Next Question</button>
   </main>
  </body>
 </html>
