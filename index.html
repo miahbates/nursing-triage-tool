@@ -116,7 +116,33 @@
           <label for="vomit-red">Yes, more than six episodes in 24 hours.</label>
         </span>
        
-        <button type="submit" data-to="4" data-name="sob">Next Question</button>
+        <button type="submit" data-to="5" data-name="vomit">Next Question</button>
+      </form>
+    </section>
+
+        <section class="symptoms" data-index="5" hidden>
+          <form action="/" method="post" class="column">
+            <h2>Diarrhoea</h2>
+            <p>Are you experiencing diarrhoea?</p>
+    
+            <span>
+              <input id="no-diarrhoea" type="radio" name="diarrhoea" value="0" />
+              <label for="no-diarrhoea">No diarrhoea.</label>
+            </span>
+            
+            <span>
+              <input id="diarrhoea-amber" type="radio" name="diarrhoea" value="2" />
+              <label for="diarrhoea-amber">Yes, two to six bowel movements in 24 hours.</label>
+            </span>
+            
+            <span>
+              <input id="diarrhoea-red" type="radio" name="diarrhoea" value="3" />
+              <label for="diarrhoea-red">Yes, seven of more bowel movements in 24 hours.</label>
+            </span>
+           
+            <button type="submit" data-to="5" data-name="diarrhoea">Next Question</button>
+          </form>
+         </section>
   </main>
  </body>
 </html>
