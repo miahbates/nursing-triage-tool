@@ -67,6 +67,9 @@ nextButtons.forEach(nextButton => {
   })
 })
 
+// Go to waiting room page
+// loop over scores to see which is highest and prioritise accordingly.
+
 
 // seperate event listeners which find target info from questions and push to an array
 // one event listener which listens to what form was submit

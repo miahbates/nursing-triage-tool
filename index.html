@@ -140,7 +140,37 @@
               <label for="diarrhoea-red">Yes, seven of more bowel movements in 24 hours.</label>
             </span>
            
-            <button type="submit" data-to="5" data-name="diarrhoea">Next Question</button>
+            <button type="submit" data-to="6" data-name="diarrhoea">Next Question</button>
+          </form>
+          </section>
+
+
+        <section class="symptoms" data-index="6" hidden>
+          <form action="/" method="post" class="column">
+            <h2>Constipation</h2>
+            <p>Are you constipated? If yes, when was the last time you opened your bowels?</p>
+    
+            <span>
+              <input id="no-constipation" type="radio" name="constipation" value="0" />
+              <label for="no-constipation">I'm not constipated.</label>
+            </span>
+            
+            <span>
+              <input id="constipation-green" type="radio" name="constipation" value="1" />
+              <label for="constipation-green">Mild. No bowel movement for 24 hours.</label>
+            </span>
+
+            <span>
+              <input id="constipation-amber" type="radio" name="constipation" value="1" />
+              <label for="constipation-amber">Moderate. No bowel movement for 48 hours.</label>
+            </span>
+            
+            <span>
+              <input id="constipation-red" type="radio" name="constipation" value="3" />
+              <label for="constipation-red">Severe. No bowels movement for 72 hours.</label>
+            </span>
+           
+            <button type="submit" data-to="6" data-name="constipation">Next Question</button>
           </form>
          </section>
   </main>
