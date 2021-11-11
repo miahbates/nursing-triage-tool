@@ -161,7 +161,7 @@
             </span>
 
             <span>
-              <input id="constipation-amber" type="radio" name="constipation" value="1" />
+              <input id="constipation-amber" type="radio" name="constipation" value="2" />
               <label for="constipation-amber">Moderate. No bowel movement for 48 hours.</label>
             </span>
             
@@ -170,7 +170,31 @@
               <label for="constipation-red">Severe. No bowels movement for 72 hours.</label>
             </span>
            
-            <button type="submit" data-to="6" data-name="constipation">Next Question</button>
+            <button type="submit" data-to="7" data-name="constipation">Next Question</button>
+          </form>
+         </section>
+
+        <section class="symptoms" data-index="7" hidden>
+          <form action="/" method="post" class="column">
+            <h2>Rash</h2>
+            <p>Do you have a rash?</p>
+    
+            <span>
+              <input id="no-rash" type="radio" name="rash" value="0" />
+              <label for="no-rash">I don't have a rash.</label>
+            </span>
+            
+            <span>
+              <input id="rash-amber" type="radio" name="rash" value="2" />
+              <label for="rash-amber">Mild rash covering 10% of body, with no itcing or redness.</label>
+            </span>
+
+            <span>
+              <input id="rash-red" type="radio" name="rash" value="3" />
+              <label for="rash-red">Covering over 30% of your body, with any of the following redness, ithcing, burning, skin tightness.</label>
+            </span>
+            
+            <button type="submit" data-to="7" data-name="rash">Next Question</button>
           </form>
          </section>
   </main>
