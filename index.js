@@ -66,6 +66,8 @@ for (let i = 0; i < restartAssessmentBtns.length; i++ ) {
       sections[j].setAttribute('hidden', true);
     }
     intro.removeAttribute("hidden");
+    waitingRoomSection.setAttribute('hidden', true);
+
     // reset score to 0
     patientScore = 0;
   });
@@ -83,6 +85,16 @@ if (localStorage.arrayOfPatients) {
   arrayOfPatients = JSON.parse(localStorage.arrayOfPatients);
 } 
 
+// random id section
+const giveRandomIdSection = document.querySelector('#giveRandomId');
+// go to  waiting room btn
+const goToWaitingRoomBtn = document.querySelector('.goToWaitingRoom');
+// waiting room section
+const waitingRoomSection = document.querySelector('#waitingRoom');
+// Random Id h2 element
+const randomIdH2 = document.querySelector("#displayRandomId");
+console.log(randomIdH2);
+
 console.log('p', arrayOfPatients);
 
 // Event listener on completed assessment btn
@@ -99,6 +111,21 @@ completedAssessment.addEventListener('click', (event) => {
 
   // update local storage with new value - make string as local storage only accepts string
   localStorage.arrayOfPatients = JSON.stringify(arrayOfPatients);
+  
+  // hide all question sections
+  sections.forEach((section) => {
+    section.setAttribute('hidden', true);
+  });
+
+  // show randomId section
+  giveRandomIdSection.removeAttribute("hidden");
+  randomIdH2.innerHTML = `Your ticket number is ${randomId}`;
+ 
+});
+
+goToWaitingRoomBtn.addEventListener('click', (event) => {
+  waitingRoomSection.removeAttribute("hidden");
+  giveRandomIdSection.setAttribute("hidden", true);
 });
 
 // make current page hidden 
