@@ -48,7 +48,7 @@ nextButtons.forEach(nextButton => {
         patientScore += parseInt(radio.value);
       }
     });
-    // console.log('Your score is ', patientScore);
+    console.log('Your score is ', patientScore);
   });
 });
 
@@ -57,15 +57,7 @@ nextButtons.forEach(nextButton => {
 const restartAssessmentBtns = document.querySelectorAll('.restartAssessment');
 // console.log(restartAssessmentBtn);
 
-// restartAssessmentBtns.addEventListener('click', () => {
-//   for (let i = 0; i < sections.length; i++) {
-//     console.log(sections);
-//     sections[i].setAttribute('hidden', true);
-//   };
-//   intro.setAttribute('hidden', false);
-//   patientScore = 0;
-// });
-
+// loop over and find out which one is clicked
 for (let i = 0; i < restartAssessmentBtns.length; i++ ) {
   restartAssessmentBtns[i].addEventListener('click', (e) => {
     e.preventDefault();
@@ -74,9 +66,40 @@ for (let i = 0; i < restartAssessmentBtns.length; i++ ) {
       sections[j].setAttribute('hidden', true);
     }
     intro.removeAttribute("hidden");
+    // reset score to 0
     patientScore = 0;
   });
 }
+
+// get completed button 
+const completedAssessment = document.querySelector('#completedAssessment');
+// console.log(completedAssessment);
+
+// empty array to store object with id and score
+let arrayOfPatients = [];
+
+// read local storage which is empty 
+if (localStorage.arrayOfPatients) {
+  arrayOfPatients = JSON.parse(localStorage.arrayOfPatients);
+} 
+
+console.log('p', arrayOfPatients);
+
+// Event listener on completed assessment btn
+completedAssessment.addEventListener('click', (event) => {
+  // generate random id 
+  const randomId = Date.now();
+
+  // create object with id and patient score score 
+  const patient = { id : randomId, score: patientScore };
+
+  // add objects to patients array 
+  arrayOfPatients.push(patient);
+  console.log(arrayOfPatients);
+
+  // update local storage with new value - make string as local storage only accepts string
+  localStorage.arrayOfPatients = JSON.stringify(arrayOfPatients);
+});
 
 // make current page hidden 
 
@@ -95,6 +118,15 @@ for (let i = 0; i < restartAssessmentBtns.length; i++ ) {
 //   })
 
 // })
+
+// restartAssessmentBtns.addEventListener('click', () => {
+//   for (let i = 0; i < sections.length; i++) {
+//     console.log(sections);
+//     sections[i].setAttribute('hidden', true);
+//   };
+//   intro.setAttribute('hidden', false);
+//   patientScore = 0;
+// });
 
 // Go to waiting room page
 // loop over scores to see which is highest and prioritise accordingly.
