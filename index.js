@@ -85,6 +85,15 @@ if (localStorage.arrayOfPatients) {
   arrayOfPatients = JSON.parse(localStorage.arrayOfPatients);
 } 
 
+const waitingRoomUl = document.getElementById('waitingRoomList');
+for (const patient of arrayOfPatients) {
+  // Make Li 
+  const waitingRoomAddPatient = document.createElement("LI");
+  waitingRoomAddPatient.textContent = patient.id;
+  // add object id to li 
+  waitingRoomUl.appendChild(waitingRoomAddPatient);
+}
+
 // random id section
 const giveRandomIdSection = document.querySelector('#giveRandomId');
 // go to  waiting room btn
@@ -107,7 +116,10 @@ completedAssessment.addEventListener('click', (event) => {
 
   // add objects to patients array 
   arrayOfPatients.push(patient);
-  console.log(arrayOfPatients);
+  // console.log('1', arrayOfPatients.map(x => x));
+
+  arrayOfPatients.sort((a, b) => (b.score - a.score));
+  console.log('2', arrayOfPatients);
 
   // update local storage with new value - make string as local storage only accepts string
   localStorage.arrayOfPatients = JSON.stringify(arrayOfPatients);
@@ -120,13 +132,35 @@ completedAssessment.addEventListener('click', (event) => {
   // show randomId section
   giveRandomIdSection.removeAttribute("hidden");
   randomIdH2.innerHTML = `Your ticket number is ${randomId}`;
- 
+  // copyToClipboard(copyId);
+  // console.log(randomIdH2);
+  // console.log('yay', copyToClipboard(randomIdH2));
+  
+  // get ul element
+  const waitingRoomUl= document.getElementById('waitingRoomList');
+  // Make Li 
+  const waitingRoomAddPatient = document.createElement("LI");
+  waitingRoomAddPatient.textContent = randomId;
+  // add object id to li 
+  waitingRoomUl.appendChild(waitingRoomAddPatient);
+
 });
 
 goToWaitingRoomBtn.addEventListener('click', (event) => {
   waitingRoomSection.removeAttribute("hidden");
   giveRandomIdSection.setAttribute("hidden", true);
 });
+
+// // copy to clipboard
+// function copyToClipboard(text) {
+//   if (window.clipboardData) { 
+//     window.clipboardData.setData("Text", text);
+//   } else {
+//     unsafeWindow.netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+//     const clipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper);
+//     clipboardHelper.copyString(text);
+//   }
+// }
 
 // make current page hidden 
 

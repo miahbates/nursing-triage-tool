@@ -4,6 +4,11 @@ html {
   overflow: hidden;
 }
 
+body {
+  width: 90vw;
+  margin: 0 auto;
+}
+
 /* mobile */
 
 h1 {
@@ -26,11 +31,12 @@ section {
   font-size: 1.5rem;
   text-align: center;
   margin: 0 auto;
-  width: 85vw;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 button {
-  box-shadow: 5px 5px 5px 0 #78CDD7;
+  box-shadow: rgb(108 112 116 / 44%) 0px 8px 24px; 
   border-radius: 5px;
   padding: 20px;
   font-size: 1.3rem;
@@ -39,14 +45,15 @@ button {
   color: #0D5C63;
   cursor: pointer;
   transition: background-color .2s, color .2s;
-  margin-top: 15px;
+  margin: 5px auto;
+  width: 100%;
 }
 
  button:hover {
-  box-shadow: 5px 5px 5px 0 #247B7B;
+  box-shadow: #78CDD7 0px 8px 24px;
   background-color: #002A53;
-  color: white;
-  transform: scale(1.1); 
+  color: #FAF9F6;
+  transform: scale(0.9); 
 }
 
 .fa-laptop-medical {
@@ -91,14 +98,16 @@ form > span {
 }
 
 form > button {
-  box-shadow: rgb(108 112 116 / 44%) 0px 8px 24px;
+  box-shadow: #78CDD7 0px 8px 24px;
+  width: 100%;
 }
 
 form > button:hover {
   transform: scale(0.9);
   background-color: #002A53;
-  color: white;
-  box-shadow: rgb(108 112 116 / 44%) 0px 8px 24px;
+  color: #FAF9F6;
+  box-shadow: #78CDD7 0px 8px 24px;
+  width: 100%;
 
 }
 
@@ -111,22 +120,31 @@ form > button:hover {
   to{border-right-color: transparent;}
 }
 
-/* #waitingRoom:hover {
-  background-color: #247B7B;
-  box-shadow: 5px 5px 5px 0 #78CDD7;
+#waitingRoomList {
+  margin: 20px auto;
+  text-align: center;
+  display: inline-block;
+  background-color: #FAF9F6;
+  color: #002A53;
+}
 
-} */
+#waitingRoomList > li{
+  padding: 10px;
+  font-size: 1.8rem;
+  margin: 0 auto;
+  background-color: #FAF9F6;
+  color:#002A53;
+}
+
+h2 {
+  font-size: 2rem;
+}
 
 /* bigger screens */
 
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 3rem;
-  }
-
-  .intro {
-    margin: 0 auto;
-    width: 60vw;
   }
 
   button, section {
@@ -139,8 +157,12 @@ form > button:hover {
   }
 
   section {
-    width: 55vw;
+    width: 100%;
     margin: 20px auto;
+  }
+
+  body {
+    width: 60vw;
   }
 
 }
