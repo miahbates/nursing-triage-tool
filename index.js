@@ -126,10 +126,12 @@ completedAssessment.addEventListener('click', (event) => {
   // copyToClipboard(copyId);
   // console.log(randomIdH2);
   // console.log('yay', copyToClipboard(randomIdH2));
-
+  
+  // grab waiting room ul and set to empty string each time
   let waitingRoomUl = document.getElementById('waitingRoomList');
   waitingRoomUl.innerHTML = "";
-
+  
+  // loop over array and add new ordered ID's to Li elements.
   for (const patient of arrayOfPatients) {
   // Make Li 
     const waitingRoomAddPatient = document.createElement("LI");
