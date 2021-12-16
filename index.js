@@ -85,15 +85,6 @@ if (localStorage.arrayOfPatients) {
   arrayOfPatients = JSON.parse(localStorage.arrayOfPatients);
 } 
 
-const waitingRoomUl = document.getElementById('waitingRoomList');
-for (const patient of arrayOfPatients) {
-  // Make Li 
-  const waitingRoomAddPatient = document.createElement("LI");
-  waitingRoomAddPatient.textContent = patient.id;
-  // add object id to li 
-  waitingRoomUl.appendChild(waitingRoomAddPatient);
-}
-
 // random id section
 const giveRandomIdSection = document.querySelector('#giveRandomId');
 // go to  waiting room btn
@@ -135,15 +126,17 @@ completedAssessment.addEventListener('click', (event) => {
   // copyToClipboard(copyId);
   // console.log(randomIdH2);
   // console.log('yay', copyToClipboard(randomIdH2));
-  
-  // get ul element
-  const waitingRoomUl= document.getElementById('waitingRoomList');
-  // Make Li 
-  const waitingRoomAddPatient = document.createElement("LI");
-  waitingRoomAddPatient.textContent = randomId;
-  // add object id to li 
-  waitingRoomUl.appendChild(waitingRoomAddPatient);
 
+  let waitingRoomUl = document.getElementById('waitingRoomList');
+  waitingRoomUl.innerHTML = "";
+
+  for (const patient of arrayOfPatients) {
+  // Make Li 
+    const waitingRoomAddPatient = document.createElement("LI");
+    waitingRoomAddPatient.textContent = patient.id;
+    // add object id to li 
+    waitingRoomUl.appendChild(waitingRoomAddPatient);
+  }
 });
 
 goToWaitingRoomBtn.addEventListener('click', (event) => {
