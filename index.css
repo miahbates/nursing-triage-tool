@@ -93,6 +93,15 @@ button {
              blinkTextCursor 500ms steps(2) infinite normal;
 }
 
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 342px;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: #247B7B;}
+  to{border-right-color: transparent;}
+}
+
 form > span {
   padding: 15px;
 }
@@ -109,15 +118,6 @@ form > button:hover {
   box-shadow: #78CDD7 0px 8px 24px;
   width: 100%;
 
-}
-
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 342px;}
-}
-@keyframes blinkTextCursor{
-  from{border-right-color: #247B7B;}
-  to{border-right-color: transparent;}
 }
 
 #waitingRoomList {

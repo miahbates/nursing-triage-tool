@@ -100,7 +100,7 @@ console.log('p', arrayOfPatients);
 // Event listener on completed assessment btn
 completedAssessment.addEventListener('click', (event) => {
   // generate random id 
-  const randomId = Date.now();
+  let randomId = Date.now();
 
   // create object with id and patient score score 
   const patient = { id : randomId, score: patientScore };
@@ -119,13 +119,14 @@ completedAssessment.addEventListener('click', (event) => {
   sections.forEach((section) => {
     section.setAttribute('hidden', true);
   });
+   
+  const copyBtn = document.querySelector('.copy');
+
+  navigator.clipboard.writeText(`${randomId}`);
 
   // show randomId section
   giveRandomIdSection.removeAttribute("hidden");
   randomIdH2.innerHTML = `Your ticket number is ${randomId}`;
-  // copyToClipboard(copyId);
-  // console.log(randomIdH2);
-  // console.log('yay', copyToClipboard(randomIdH2));
   
   // grab waiting room ul and set to empty string each time
   let waitingRoomUl = document.getElementById('waitingRoomList');
@@ -145,17 +146,6 @@ goToWaitingRoomBtn.addEventListener('click', (event) => {
   waitingRoomSection.removeAttribute("hidden");
   giveRandomIdSection.setAttribute("hidden", true);
 });
-
-// // copy to clipboard
-// function copyToClipboard(text) {
-//   if (window.clipboardData) { 
-//     window.clipboardData.setData("Text", text);
-//   } else {
-//     unsafeWindow.netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
-//     const clipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].getService(Components.interfaces.nsIClipboardHelper);
-//     clipboardHelper.copyString(text);
-//   }
-// }
 
 // make current page hidden 
 
