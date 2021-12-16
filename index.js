@@ -93,7 +93,7 @@ const goToWaitingRoomBtn = document.querySelector('.goToWaitingRoom');
 const waitingRoomSection = document.querySelector('#waitingRoom');
 // Random Id h2 element
 const randomIdH2 = document.querySelector("#displayRandomId");
-console.log(randomIdH2);
+// console.log(randomIdH2);
 
 console.log('p', arrayOfPatients);
 
