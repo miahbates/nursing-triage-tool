@@ -19,6 +19,9 @@ triageButton.addEventListener("click", function hideIntro() {
 let buttons = document.querySelectorAll('[data-to]');
 const sections = document.querySelectorAll('[data-index]'); 
 
+// "Copy top clipboard" button
+const copyBtn = document.querySelector('.copy');
+
 for (let i = 0; i < buttons.length; i++ ) {
   buttons[i].addEventListener('click', (e) => {
     e.preventDefault();
@@ -102,6 +105,8 @@ completedAssessment.addEventListener('click', (event) => {
   // generate random id 
   let randomId = Date.now();
 
+  copyBtn.dataset.id = randomId;
+
   // create object with id and patient score score 
   const patient = { id : randomId, score: patientScore };
 
@@ -119,10 +124,6 @@ completedAssessment.addEventListener('click', (event) => {
   sections.forEach((section) => {
     section.setAttribute('hidden', true);
   });
-   
-  const copyBtn = document.querySelector('.copy');
-
-  navigator.clipboard.writeText(`${randomId}`);
 
   // show randomId section
   giveRandomIdSection.removeAttribute("hidden");
@@ -145,6 +146,10 @@ completedAssessment.addEventListener('click', (event) => {
 goToWaitingRoomBtn.addEventListener('click', (event) => {
   waitingRoomSection.removeAttribute("hidden");
   giveRandomIdSection.setAttribute("hidden", true);
+});
+
+copyBtn.addEventListener('click', () => {
+  navigator.clipboard.writeText(copyBtn.dataset.id);
 });
 
 // make current page hidden 
