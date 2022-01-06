@@ -1,5 +1,5 @@
 // check if clicking triage button takes you to the chest pain section.
-test("check if clicking triage button takes you to the chest pain section" , () => {
+test("Check if clicking triage button takes you to the chest pain section" , () => {
   // arrange - create varibles/input and pass in what you think you are going to get
   // grab triage button 
   // grab chest pain section 
@@ -25,20 +25,20 @@ test("check if clicking triage button takes you to the chest pain section" , () 
 });
 
 // check if clicking restart button restarts the assesment.
-test("check if clicking restart button restarts the assesment" , () => {
+test("Check if clicking restart button restarts the assesment" , () => {
   // arrange - create varibles/input and pass in what you think you are going to get
   // grab restart button
   // grab section intro
-  // check if chest pain section contains hidden attribute - should be false
 
   const restartButton = document.querySelector(".restartAssessment");
   const intro = document.querySelector(".intro");
   // console.log(restartButtons, intro);
-  const introHidden = intro.hasAttribute('hidden');
 
   // act
   // click the next question button
+  // check if chest pain section contains hidden attribute - should be false
   restartButton.click();
+  const introHidden = intro.hasAttribute('hidden');
 
   // assert - call helper function
   let expected = false;
