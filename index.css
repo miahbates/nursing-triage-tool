@@ -149,11 +149,6 @@ h2 {
   justify-content: center;
 }
 
-#covid-widget-inside {
-  position: absolute; 
-  border: 2px solid #015eb8;
-}
-
 /* bigger screens */
 
 @media screen and (min-width: 768px) {
@@ -177,12 +172,6 @@ h2 {
 
   body {
     width: 60vw;
-  }
-
-  #covid-widget {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
   }
 
 }
