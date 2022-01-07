@@ -146,14 +146,12 @@ h2 {
   height: 300px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 #covid-widget-inside {
   position: absolute; 
   border: 2px solid #015eb8;
-  max-width: 100%;
-  height: 300px;
 }
 
 /* bigger screens */
@@ -179,6 +177,11 @@ h2 {
 
   body {
     width: 60vw;
+  }
+
+  #covid-widget {
+    max-width: 100%; 
+    height: 300px;
   }
 
 }
