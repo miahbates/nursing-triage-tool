@@ -8,12 +8,12 @@ Nursing triage tool which accepts input symptoms from users, the tool will prior
 *image of site to insert*
 
 ## Included features
-- :heart:
-- :orange_heart: 
-- :yellow_heart: 
-- :green_heart: 
-- :blue_heart: 
-- :purple_heart: 
+- :heart: Use of data-attributes to navigate through assessment questions.
+- :orange_heart: Virtual waiting room.
+- :yellow_heart: NHS COVID widget.
+- :green_heart: COVID API for current countries.
+- :blue_heart: Feature to copy "ticket number" to clipboard.
+- :purple_heart: Accessible and responsive.
 
 ## Improvements and futures ideas
 -
