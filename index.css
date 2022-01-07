@@ -19,11 +19,11 @@ h1 {
   margin: 20px auto;
 }
 
-p, section, footer {
+p, section, #widget-section {
   font-family: "montserrat", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-section, footer {
+section, #widget-section {
   background-color: #78CDD7;
   color: #002A53;
   padding: 20px;
