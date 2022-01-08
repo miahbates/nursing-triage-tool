@@ -16,6 +16,6 @@ Nursing triage tool which accepts input symptoms from users, the tool will prior
 - :purple_heart: Accessible and responsive.
 
 ## Improvements and futures ideas
--
--
--
+- add feature for patients who have waiting a certain time to be 'bumped' up the queue.
+- patients given rough time for waiting depending on amount of patients in the queue.
+
