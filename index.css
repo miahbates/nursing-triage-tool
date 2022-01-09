@@ -95,7 +95,7 @@ button {
 
 @keyframes typewriter{
   from{width: 0;}
-  to{width: 342px;}
+  to{width: 90vw;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: #247B7B;}
@@ -176,7 +176,6 @@ h4 {
 }
 
 .footer-content {
-  margin-left: 10px;
   padding: 10px;
 }
 
@@ -200,4 +199,12 @@ h4 {
     width: 60vw;
   }
 
+  .footer-content {
+    margin-left: 10px;
+  }
+
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 342px;}
+  }
 }
