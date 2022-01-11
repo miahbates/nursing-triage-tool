@@ -18,4 +18,5 @@ Nursing triage tool which accepts input symptoms from users, the tool will prior
 ## Improvements and futures ideas
 - add feature for patients who have waited over a certain time to be 'bumped' up the queue.
 - patients given rough time for waiting depending on amount of patients in the queue.
+- use cypress testing
 
